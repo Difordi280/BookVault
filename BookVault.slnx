@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="BookVault.App/BookVault.App.csproj" />
+  <Project Path="BookVault.Data/BookVault.Data.csproj" />
+  <Project Path="BookVault.Domain/BookVault.Domain.csproj" />
+  <Project Path="BookVault.Logic/BookVault.Logic.csproj" />
+</Solution>
