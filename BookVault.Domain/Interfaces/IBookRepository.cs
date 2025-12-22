@@ -13,7 +13,7 @@ namespace BookVault.Domain.Interfaces
         Task<Book> GetBook(Guid Id);
         
         //lista de libros pendientes 
-        Task<IEnumerable<Book>> BooksToInsert();
+        Task<IEnumerable<Book>> PendingBooks();
 
     }
 }
