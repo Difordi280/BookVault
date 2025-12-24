@@ -12,6 +12,7 @@ namespace BookVault.Domain.Models
         public string Title { set; get; }
         public string Author { set; get; }
         public string Isbn { set; get; }
+        public Category Category { set; get; }
 
         // sirve para identificar si  dato se a subido o no a la nube
         public bool IsSynced { set; get; }
