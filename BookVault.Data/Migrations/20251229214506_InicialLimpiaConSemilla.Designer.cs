@@ -3,6 +3,7 @@ using System;
 using BookVault.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookVault.Data.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    partial class LibraryContextModelSnapshot : ModelSnapshot
+    [Migration("20251229214506_InicialLimpiaConSemilla")]
+    partial class InicialLimpiaConSemilla
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.1");
@@ -62,7 +65,7 @@ namespace BookVault.Data.Migrations
                             IsDeleted = false,
                             IsSynced = false,
                             Isbn = "978-0307474728",
-                            LastModified = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2025, 12, 29, 16, 45, 5, 428, DateTimeKind.Local).AddTicks(6389),
                             Title = "Cien años de soledad"
                         },
                         new
@@ -73,7 +76,7 @@ namespace BookVault.Data.Migrations
                             IsDeleted = false,
                             IsSynced = false,
                             Isbn = "978-8408163381",
-                            LastModified = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2025, 12, 29, 16, 45, 5, 431, DateTimeKind.Local).AddTicks(6247),
                             Title = "La sombra del viento"
                         },
                         new
@@ -84,7 +87,7 @@ namespace BookVault.Data.Migrations
                             IsDeleted = false,
                             IsSynced = false,
                             Isbn = "978-8449330643",
-                            LastModified = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2025, 12, 29, 16, 45, 5, 431, DateTimeKind.Local).AddTicks(6271),
                             Title = "Sapiens: De animales a dioses"
                         },
                         new
@@ -95,7 +98,7 @@ namespace BookVault.Data.Migrations
                             IsDeleted = false,
                             IsSynced = false,
                             Isbn = "978-0743273565",
-                            LastModified = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2025, 12, 29, 16, 45, 5, 431, DateTimeKind.Local).AddTicks(6275),
                             Title = "The Great Gatsby"
                         },
                         new
@@ -106,7 +109,7 @@ namespace BookVault.Data.Migrations
                             IsDeleted = false,
                             IsSynced = false,
                             Isbn = "978-0735211292",
-                            LastModified = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2025, 12, 29, 16, 45, 5, 431, DateTimeKind.Local).AddTicks(6278),
                             Title = "Atomic Habits"
                         },
                         new
@@ -117,7 +120,7 @@ namespace BookVault.Data.Migrations
                             IsDeleted = false,
                             IsSynced = false,
                             Isbn = "978-0451524935",
-                            LastModified = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2025, 12, 29, 16, 45, 5, 431, DateTimeKind.Local).AddTicks(6292),
                             Title = "1984"
                         },
                         new
@@ -128,7 +131,7 @@ namespace BookVault.Data.Migrations
                             IsDeleted = false,
                             IsSynced = false,
                             Isbn = "978-2070612758",
-                            LastModified = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2025, 12, 29, 16, 45, 5, 431, DateTimeKind.Local).AddTicks(6296),
                             Title = "Le Petit Prince"
                         },
                         new
@@ -139,7 +142,7 @@ namespace BookVault.Data.Migrations
                             IsDeleted = false,
                             IsSynced = false,
                             Isbn = "978-2070360024",
-                            LastModified = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2025, 12, 29, 16, 45, 5, 431, DateTimeKind.Local).AddTicks(6299),
                             Title = "L'Étranger"
                         });
                 });

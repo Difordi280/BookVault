@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="BookVault.App.Views.BookListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,15">
+            <TextBlock Text="Catálogo de Libros"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       Foreground="{DynamicResource PrimaryTextBrush}"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding LoadBook}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="None"
+                  Background="Transparent"
+                  BorderThickness="0">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Título" Width="2*" Binding="{Binding Title}"/>
+                <DataGridTextColumn Header="Autor" Width="1.5*" Binding="{Binding Author}"/>
+                <DataGridTextColumn Header="Categoría" Width="*" Binding="{Binding Category.Name}"/>
+
+                <DataGridTemplateColumn Header="Origen" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Border Background="#F0F0F0" 
+                                    CornerRadius="4" 
+                                    Padding="10,2" 
+                                    HorizontalAlignment="Left"
+                                    Margin="5">
+                                <TextBlock Text="{Binding Country}" 
+                                           Foreground="#333333"
+                                           FontSize="12"
+                                           FontWeight="SemiBold"
+                                           VerticalAlignment="Center"/>
+                            </Border>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,22 +10,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BookVault.App.ViewModels;
-using BookVault.Domain.Models;
 
-namespace BookVault.App
+namespace BookVault.App.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica de interacción para BookRegisterView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BookRegisterView : UserControl
     {
-        public MainWindow(MainViewModel viewModel )
+        public BookRegisterView()
         {
             InitializeComponent();
-            this.DataContext = viewModel;
-            
-
         }
     }
 }

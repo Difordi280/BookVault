@@ -1,6 +1,18 @@
 <Solution>
-  <Project Path="BookVault.App/BookVault.App.csproj" />
-  <Project Path="BookVault.Data/BookVault.Data.csproj" />
-  <Project Path="BookVault.Domain/BookVault.Domain.csproj" />
-  <Project Path="BookVault.Logic/BookVault.Logic.csproj" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="BookVault.App/BookVault.App.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="BookVault.Data/BookVault.Data.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="BookVault.Domain/BookVault.Domain.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="BookVault.Logic/BookVault.Logic.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>

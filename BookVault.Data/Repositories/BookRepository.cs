@@ -9,7 +9,7 @@ using System.Formats.Asn1;      // Necesario si el Contexto está en otra carpet
 
 namespace BookVault.Data.Repositories
 {
-    internal class BookRepository:IBookRepository
+    public class BookRepository:IBookRepository
     {
         // 1. Definicion del campo privado
         private readonly LibraryContext _context;
@@ -22,7 +22,7 @@ namespace BookVault.Data.Repositories
         //Sacar los datos de la tabla SQLite
         public async Task<IEnumerable<Book>> GetAllAsny()
         {
-            return await _context.Books.ToListAsync();
+            return await _context.Books.Include(b=> b.Category).ToListAsync();
         }
 
         //Agregar de manera asincrona Datos en una tabla 
